@@ -1,0 +1,22 @@
+@import "../assets/scss/variables.scss";
+.navbar {
+  &.bg-light {
+    background-color: $WHITE !important;
+    .dropdown button {
+      color: $BLUE;
+    }
+  }
+  &.bg-dark {
+    background-color: $BLUE !important;
+    .dropdown button {
+      color: $WHITE;
+    }
+  }
+  .dropdown button {
+    text-decoration: none;
+    padding: 0;
+    height: initial;
+    display: flex;
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,85 @@
+@import "vars.scss";
+@import url(https://fonts.googleapis.com/css?family=Electrolize);
+
+@font-face {
+    font-family: 'IcoMoon-Free';
+    src: url('assets/IcoMoon-Free.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+body {
+  margin-top: 76px;
+  .container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.btn {
+  height: 42px;
+  line-height: 42px;
+  text-shadow: none;
+  border: 1px solid;
+  box-shadow: none;
+  padding: 0 30px;
+  border-radius: 4px;
+  font-weight: 300;
+  text-shadow: none;
+
+  &.btn-primary {
+    background: $primary_green_color;
+    color: $primary_white_color;
+    border-color: $primary_green_color;
+  }
+
+  &.btn-inverse {
+    background: transparent;
+    color: $primary_green_color !important;
+    border-color: $primary_green_color;
+  }
+}
+
+.text-primary {
+  color: $primary_green_color;
+}
+
+.text-muted {
+  color: $primary_grey_color;
+}
+
+a.text-primary {
+  &:hover {
+    color: $primary_green_color;
+  }
+}
+
+.lead {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+input {
+  height: initial;
+  border: none;
+  width: 100%;
+  outline: none;
+  &.border-bottom {
+    padding-bottom: 8px;
+    margin-bottom: -8px;
+    &.border-dashed {
+      background-image: linear-gradient(to right, $primary_grey_color 70%, rgba(255, 255, 255, 0) 0%);
+      background-position: bottom;
+      background-size: 12px 1px;
+      background-repeat: repeat-x;
+    }
+  }
+}
+
+.well {
+  background: $primary_white_color;
+  border: none;
+  border-radius: 0;
+  box-shadow: 0 0 1px $primary_grey_color;
+  display: inline-block;
+  width: 100%;
+}

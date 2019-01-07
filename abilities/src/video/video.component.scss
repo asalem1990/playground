@@ -1,0 +1,58 @@
+@import "../assets/scss/variables.scss";
+.video {
+  &-player {
+    position: relative;
+    max-width: 100%;
+    .video-js {
+      max-width: 100%;
+      &.vjs-paused {
+        &:before {
+          content: '';
+          height: 100%;
+          width: 100%;
+          background: $BLACK;
+          opacity: 0.5;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          z-index: 1;
+        }
+      }
+      .vjs-big-play-button {
+        border-radius: 50%;
+        height: 86px;
+        width: 86px;
+        align-items: center;
+        justify-content: center;
+        // display: flex;
+        line-height: initial;
+        background: none;
+        margin: auto;
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+
+        .vjs-icon-placeholder {
+          &:before {
+            position: relative !important;
+            top: initial !important;
+            left: initial !important;
+            width: initial !important;
+            height: initial !important;
+            font-size: 70px !important;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+    .vjs-poster {
+      background-color: transparent;
+      background-size: cover;
+    }
+  }
+}

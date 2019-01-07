@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Stickes</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <style media="screen">
+  ._sticky_element_ {
+    background: #000;
+    color: #fff;
+  }
+
+  ._sticky_element_._sticked_ {
+    position: fixed;
+    top: 0px;
+  }
+  </style>
+  <script src="stickes.js" charset="utf-8"></script>
+</head>
+<body>
+  <nav class="navbar navbar-default  navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+          <li><a href="#">Link</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+
+
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        HeyYYYYYYYYYYY this is normal text
+      </div>
+      <div class="col-xs-6">
+        This is
+        <br>
+        HeyYYYYYYYYYYY this is normal text
+      </div>
+      <div class="col-xs-6">
+        HeyYYYYYYYYYYY this is normal text
+      </div>
+      <div class="col-xs-6">
+        This is
+        <br>
+        HeyYYYYYYYYYYY this is normal text
+      </div>
+      <div class="col-xs-6">
+        HeyYYYYYYYYYYY this is normal text
+      </div>
+      <div class="col-xs-6">
+        This is
+        <br>
+        HeyYYYYYYYYYYY this is normal text
+      </div>
+      <div class="col-xs-6">
+        HeyYYYYYYYYYYY this is normal text
+      </div>
+      <div class="col-xs-6">
+        This is
+        <br>
+        HeyYYYYYYYYYYY this is normal text
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6">
+        Hey
+      </div>
+      <div class="col-xs-6 _sticky_element_ ">
+        This is
+        <br>
+        sticky element!
+      </div>
+    </div>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 _sticky_element_ _inline_sticky_">
+        STICKY STICKY
+      </div>
+      <div class="col-xs-6">
+        This is
+        <br>
+        HeyYYYYYYYYYYY this is normal text
+      </div>
+    </div>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        Hey
+      </div>
+      <div class="col-xs-6 _sticky_element_ ">
+        This is
+        <br>
+        sticky element!
+      </div>
+    </div>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 _sticky_element_ _inline_sticky_">
+        STICKY STICKY
+      </div>
+      <div class="col-xs-6">
+        This is
+        <br>
+        HeyYYYYYYYYYYY this is normal text
+      </div>
+    </div>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        HeyYYYYYYYYYYY this is normal text
+      </div>
+      <div class="col-xs-6">
+        This is
+        <br>
+        HeyYYYYYYYYYYY this is normal text
+      </div>
+    </div>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        HeyYYYYYYYYYYY this is normal text
+      </div>
+      <div class="col-xs-6">
+        This is
+        <br>
+        HeyYYYYYYYYYYY this is normal text
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+<script type="text/javascript">
+var stickes;
+window.onload = function () {
+  this.stickes = new stick_them;
+  this.stickes._sticky_top_margin = document.querySelector("nav").offsetHeight + 20;
+  this.stickes._sticky_top_padding = 10;
+  stickes.init();
+};
+window.onscroll = function () {
+  this.stickes.goSticky();
+}
+//stick_them.init();
+</script>
+</html>

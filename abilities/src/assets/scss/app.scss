@@ -1,0 +1,318 @@
+@import "mixins.scss";
+@font-face {
+  font-family: 'NeoSansArabic';
+  src:  url('../fonts/Neo Sans Arabic Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Museo Sans Cyrl 300';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Museo Sans Cyrl 300'), url('../fonts/MuseoSansCyrl.woff') format('woff');
+}
+
+body {
+  font-family: $MAIN_ARABIC_FONT;
+
+  * {
+    outline: none;
+  }
+  img {
+    max-width: 100%;
+  }
+  .row {
+    min-width: 100%;
+  }
+  .blue_backgroud {
+    background: $BLUE;
+  }
+  .grey_background {
+    background: $GREY_LIGHT;
+  }
+  .orange_background {
+    background: $ORANGE;
+  }
+  .bandage_background {
+    border-radius: $BORDER_RADIUS_SHAPE;
+    color: $WHITE;
+  }
+  .grey_font {
+    color: $GREY_DARK;
+  }
+  .display-4 {
+    font-size: 40px;
+  }
+  .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 24px;
+    &.bandage_background {
+      padding: 11px 0;
+      font-size: 28px;
+    }
+  }
+
+  .list-inline {
+    margin-left: -5px;
+    margin-right: 0px;
+    .list-inline-item:not(:last-child) {
+      margin-left: .5rem;
+      margin-right: 0;
+    }
+  }
+
+  .bandages_separator {
+    height: 100px;
+    &:after {
+      @media (min-width: 768px) {
+        @include bandage(224px, 28px, $TURQUOISE, $TURQUOISE, 0, -45deg);
+        top: 100px;
+        left: -190px;
+      }
+    }
+    &:before {
+      @media (min-width: 768px) {
+        @include bandage(74px, 20px, $BLUE, $BLUE, 0, -45deg)
+        top: 37px;
+        left: 0px;
+      }
+    }
+  }
+}
+
+#app {
+  font-family: $MAIN_ARABIC_FONT;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: $BLUE;
+  margin-top: 0px;
+  background: $WHITE;
+  overflow: hidden;
+
+  .nobdhah_section {
+    background: url('../img/landing_nobdhah_bg.png');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    >img {
+      visibility: hidden;
+      width: 100%;
+      min-height: 480px;
+    }
+    &:after {
+      @media (min-width: 768px) {
+        @include bandage(224px, 28px, transparent, $ORANGE, 3px, -45deg);
+        right: -112px;
+        left: initial;
+        top: 112px;
+      }
+    }
+    .container {
+      padding-top: 100px;
+      bottom: 0;
+      top: 0;
+      left: 15px;
+      right: 15px;
+      width: auto;
+      position: absolute;
+      .content {
+        z-index: 9;
+        position: relative;
+      }
+      &:after {
+        @media (min-width: 576px) {
+          @include circleGradient(150px, 150px, $TURQUOISE, transparent, -45deg);
+        }
+        @media (min-width: 768px) {
+          @include circleGradient(200px, 200px, $TURQUOISE, transparent, -45deg);
+        }
+        @media (min-width: 992px) {
+          @include circleGradient(250px, 250px, $TURQUOISE, transparent, -45deg);
+        }
+        @media (min-width: 1200px) {
+          @include circleGradient(300px, 300px, $TURQUOISE, transparent, -45deg);
+        }
+        z-index: 0;
+        right: -100px;
+        bottom: -32px;
+      }
+    }
+  }
+
+  .join_group_section {
+    .bandage_before {
+      position: relative;
+      @media (min-width: 768px) {
+        &:after {
+          @include bandage(264px, 30px, $TURQUOISE, $TURQUOISE, 0, 0);
+          right: -290px;
+          left: initial;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+        }
+        &:before {
+          @include bandage(182px, 28px, transparent, $ORANGE, 3px, 0)
+          bottom: initial;
+          left: initial;
+          top: -30px;
+          right: -148px;
+        }
+      }
+    }
+  }
+
+  .sofraena_section {
+    &:after {
+      @media (min-width: 576px) {
+        @include circleGradient(150px, 150px, $BLUE, transparent, -45deg);
+      }
+      @media (min-width: 768px) {
+        @include circleGradient(200px, 200px, $BLUE, transparent, -45deg);
+      }
+      @media (min-width: 992px) {
+        @include circleGradient(250px, 250px, $BLUE, transparent, -45deg);
+      }
+      @media (min-width: 1200px) {
+        @include circleGradient(300px, 300px, $BLUE, transparent, -45deg);
+      }
+      z-index: 0;
+      right: -120px;
+      bottom: -80px;
+    }
+  }
+
+  .social_media_section {
+    position: relative;
+    &:after {
+      @media (min-width: 768px) {
+        @include bandage(224px, 28px, transparent, $ORANGE, 3px, -45deg);
+        right: -112px;
+        left: initial;
+        top: 448px;
+      }
+    }
+    &:before {
+      @media (min-width: 768px) {
+        @include bandage(224px, 28px, $TURQUOISE, $TURQUOISE, 0, -45deg);
+        left: -112px;
+        right: initial;
+        bottom: 112px;
+      }
+    }
+    .circle_shape:before {
+      @media (min-width: 768px) {
+        @include circleGradient(64px, 64px, $TURQUOISE, $TURQUOISE, -45deg);
+        right: 20px;
+        left: initial;
+        top: 150px;
+      }
+    }
+    .bandage_before {
+      position: relative;
+      @media (min-width: 768px) {
+        &:after {
+          @include bandage(264px, 30px, $BLUE, $BLUE, 0, 0);
+          right: -290px;
+          left: initial;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+        }
+        &:before {
+          @include bandage(182px, 28px, transparent, $ORANGE, 3px, 0)
+          bottom: initial;
+          left: initial;
+          top: -30px;
+          right: -245px;
+        }
+      }
+    }
+  }
+
+  .photo_gallery_section {
+    .bandage_before {
+      position: relative;
+      @media (min-width: 768px) {
+        &:after {
+          @include bandage(264px, 30px, $BLUE, $BLUE, 0, 0);
+          right: -290px;
+          left: initial;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+        }
+        &:before {
+          @include bandage(182px, 28px, transparent, $TURQUOISE, 3px, 0)
+          bottom: initial;
+          left: initial;
+          top: -30px;
+          right: -182px;
+        }
+      }
+    }
+
+    .bandages_separator {
+      height: 86px;
+      &:after {
+        @media (min-width: 768px) {
+          @include bandage(224px, 28px, $TURQUOISE, $TURQUOISE, 0, -45deg);
+          top: 0px;
+          left: -60px;
+        }
+      }
+      &:before {
+        @media (min-width: 768px) {
+          @include bandage(74px, 20px, $ORANGE, $ORANGE, 0, -45deg)
+          top: 0px;
+          left: 60px;
+        }
+      }
+    }
+  }
+
+  .contact_us_section {
+    margin-top: 60px;
+    background: url("../img/footer_bg.jpg");
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+
+    .bandage_before {
+      position: relative;
+      @media (min-width: 768px) {
+        &:after {
+          @include bandage(264px, 30px, $WHITE, $WHITE, 0, 0);
+          right: -290px;
+          left: initial;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+        }
+        &:before {
+          @include bandage(182px, 28px, transparent, $TURQUOISE, 3px, 0)
+          bottom: initial;
+          left: initial;
+          top: -30px;
+          right: -182px;
+        }
+      }
+    }
+    &:before {
+      content: '';
+      background: $BLUE_DARK;
+      opacity: 0.9;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}

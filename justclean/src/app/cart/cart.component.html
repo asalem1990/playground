@@ -1,0 +1,78 @@
+<div class="container-fluid grey-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <ul class="shopping-steps">
+          <li class="active">1. CONFIRM YOUR ITEMS</li>
+          <li class="seperator"><i class="glyphicon glyphicon-menu-right"></i></li>
+          <li>2. REQUEST QUOTES</li>
+          <li class="seperator"><i class="glyphicon glyphicon-menu-right"></i></li>
+          <li>3. MANAGE QUOTES</li>
+          <li class="seperator"><i class="glyphicon glyphicon-menu-right"></i></li>
+          <li>4. ACCEPT QUOTES</li>
+          <li class="seperator"><i class="glyphicon glyphicon-menu-right"></i></li>
+          <li>5. MAKE PAYMENT</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-2">
+      <p class="text-muted">You are ordering:</p>
+      <p class="lead">{{all_items_count}} items</p>
+      <small><a href="/cart/edit" class="text-primary">VIEW / EDIT PRODUCT &rarr;</a></small>
+    </div>
+    <div class="col-xs-12 col-sm-8">
+      <p class="text-muted">For delivery to:</p>
+      <p class="lead">
+        <input type="text" name="delivery_area" value="Hackoney, London" class="border-bottom border-dashed"/>
+      </p>
+      <small>WRONG AREA? WANT TO PROVIDE AN EXACT ADDRESS? ENTER IT ABOVE TO FIND LOCAL MAKERS..</small>
+    </div>
+    <div class="col-xs-12 col-sm-2">
+      <p class="text-muted">Within:</p>
+      <p class="lead">2-6 weeks</p>
+      <small>OR PICK PREFERRED DATE</small>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid grey-bg">
+  <div class="container" *ngIf="cartDetails">
+    <div class="row">
+      <div class="col-xs-12" *ngFor="let item of cartDetails">
+          <div class="row-fluid well">
+            <div class="col-xs-12 col-sm-3">
+              <img src="{{item.imageUrl}}" alt="" class="img-rounded img-responsive">
+            </div>
+            <div class="col-xs-12 col-sm-7">
+              <p class="lead">{{item.name}}</p>
+              <p class="text-muted">Material:</p>
+              <p class="text-muted">Options:</p>
+              <p class="text-muted">Dimensions:</p>
+            </div>
+            <div class="col-xs-12 col-sm-2 quantity">
+              <p>
+                <button type="button" name="button" class="btn btn-inverse btn-quantity-change" (click)="reduceQuant(item.id)">
+                  -
+                </button>
+                <span class="lead">{{items_count[item.id]}}</span>
+                <button type="button" name="button" class="btn btn-inverse btn-quantity-change" (click)="increaseQuant(item.id)">
+                  +
+                </button>
+              </p>
+              <p>
+                <button type="button" name="button" class="btn btn-inverse">Configure</button>
+              </p>
+            </div>
+          </div>
+      </div>
+      <div class="col-xs-12 text-right">
+        <button type="button" name="button" class="btn btn-primary btn-lg">Confirm Your Items</button>
+      </div>
+    </div>
+  </div>
+</div>

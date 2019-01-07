@@ -1,0 +1,249 @@
+.content__area {
+  position: relative;
+}
+
+.content__area .hero__banner__solid__color {
+  position: absolute;
+  top: 0;
+  left: -1000px;
+  right: -1000px;
+  background-color: #276ba2;
+  height: 100%;
+  background-image: url(../img/landing_nobdhah_bg.png);
+  background-position: bottom;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+.content__area>.container {
+  background: #FFFFFF;
+  position: relative;
+  box-shadow: 0 0 24px -6px #bdbdbd;
+}
+
+
+@media (min-width: 768px) {
+  .content__area>.container .shape__1::before {
+    content: "";
+    height: 46px;
+    width: 140px;
+    background: #ebebeb;
+    position: absolute;
+    z-index: 0;
+    border-radius: 23px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    left: 17px;
+    top: -40px;
+  }
+
+  .content__area>.container .shape__1::after {
+    content: "";
+    height: 46px;
+    width: 46px;
+    position: absolute;
+    z-index: 0;
+    border-radius: 50%;
+    background: #e08543;
+    left: -20px;
+    top: 40px;
+  }
+
+  .content__area>.container .shape__2::before {
+    content: "";
+    height: 22px;
+    width: 140px;
+    background: #3db7af;
+    position: absolute;
+    z-index: 0;
+    border-radius: 23px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    left: 100px;
+    top: -20px;
+  }
+
+  .content__area>.container .shape__2::after {
+    content: "";
+    height: 22px;
+    width: 22px;
+    position: absolute;
+    z-index: 0;
+    border-radius: 50%;
+    background: #3db7af;
+    left: 98px;
+    top: 40px;
+  }
+
+  .content__area>.container .shape__3::before {
+    content: "";
+    height: 22px;
+    width: 180px;
+    background: #3db7af;
+    position: absolute;
+    z-index: 0;
+    border-radius: 23px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    left: -100px;
+    top: 146px;
+  }
+
+  .content__area>.container .shape__3::after {
+    content: "";
+    height: 2px;
+    width: 250px;
+    background: #00aeef;
+    position: absolute;
+    z-index: 0;
+    border-radius: 23px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    left: -126px;
+    top: 170px;
+  }
+
+  .content__area>.container .shape__4::before {
+    content: "";
+    height: 22px;
+    width: 140px;
+    background: #e08543;
+    position: absolute;
+    z-index: 0;
+    border-radius: 23px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    right: -76px;
+    top: 396px;
+  }
+
+  .content__area>.container .shape__4::after {
+    content: "";
+    height: 2px;
+    width: 250px;
+    background: #3db7af;
+    position: absolute;
+    z-index: 0;
+    border-radius: 23px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    right: -143px;
+    top: 420px;
+  }
+
+  .content__area>.container .shape__5::before {
+    content: "";
+    height: 22px;
+    width: 140px;
+    background: #3db7af;
+    position: absolute;
+    z-index: 0;
+    border-radius: 23px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    right: -76px;
+    bottom: 126px;
+  }
+
+  .content__area>.container .shape__5::after {
+    content: "";
+    height: 2px;
+    width: 250px;
+    background: #00aeef;
+    position: absolute;
+    z-index: 0;
+    border-radius: 23px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    right: -70px;
+    bottom: 40px;
+  }
+
+  .content__area>.container .shape__6::after {
+    content: "";
+    height: 22px;
+    width: 22px;
+    position: absolute;
+    z-index: 0;
+    border-radius: 50%;
+    background: #3db7af;
+    right: 44px;
+    bottom: 66px;
+  }
+
+  .content__area>.container .shape__7::after {
+    content: "";
+    height: 46px;
+    width: 46px;
+    position: absolute;
+    z-index: 0;
+    border-radius: 50%;
+    background: #e08543;
+    left: 44px;
+    bottom: 166px;
+  }
+
+  .content__area>.container .shape__8::before {
+    content: "";
+    height: 46px;
+    width: 240px;
+    background: #276ba2;
+    position: absolute;
+    z-index: 0;
+    border-radius: 23px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    left: -140px;
+    bottom: 220px;
+  }
+
+  .content__area>.container .shape__8::after {
+    content: "";
+    height: 22px;
+    width: 140px;
+    background: #3db7af;
+    position: absolute;
+    z-index: 0;
+    border-radius: 23px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    left: -100px;
+    bottom: 133px;
+  }
+
+
+}
+
+
+
+

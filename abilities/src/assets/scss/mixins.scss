@@ -1,0 +1,49 @@
+
+@mixin rotate($degrees) {
+   -webkit-transform: rotate($degrees);
+   -moz-transform: rotate($degrees);
+   -ms-transform: rotate($degrees);
+   -o-transform: rotate($degrees);
+   transform: rotate($degrees);
+}
+
+@mixin bandage($width, $height, $backgroundColor, $borderColor, $borderWidth, $rotate) {
+  content: '';
+  height: $height;
+  width: $width;
+  background: $backgroundColor;
+  border: $borderWidth solid $borderColor;
+  position: absolute;
+  z-index: 9;
+  bottom: -$height/2;
+  left: -$width/2;
+  border-radius: $BORDER_RADIUS_SHAPE;
+  @include rotate($rotate);
+}
+
+@mixin circleGradient($width, $height, $color1, $color2, $rotate) {
+  content: '';
+  height: $height;
+  width: $width;
+  position: absolute;
+  z-index: 9;
+  border-radius: $BORDER_RADIUS_CIRCLE;
+  @include rotate($rotate);
+  @include gradientBackground($color1, $color2);
+}
+
+@mixin gradientBackground($color1, $color2) {
+  background: linear-gradient($color1 0% 4%, $color2 4% 8%,
+                              $color1 8% 12%, $color2 12% 16%,
+                              $color1 16% 20%, $color2 20% 24%,
+                              $color1 24% 28%, $color2 28% 32%,
+                              $color1 32% 36%, $color2 36% 40%,
+                              $color1 40% 44%, $color2 44% 48%,
+                              $color1 48% 52%, $color2 52% 56%,
+                              $color1 56% 60%, $color2 60% 64%,
+                              $color1 64% 68%, $color2 68% 72%,
+                              $color1 72% 76%, $color2 76% 80%,
+                              $color1 80% 84%, $color2 84% 88%,
+                              $color1 88% 92%, $color2 92% 96%,
+                              $color1 96% 100%);
+}

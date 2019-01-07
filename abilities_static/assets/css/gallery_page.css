@@ -1,0 +1,70 @@
+.flex-row > [class*='col-'] {
+  padding-top: 30px;
+}
+@media (min-width: 768px) {
+  .flex-row {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-top: 30px;
+  }
+  .flex-row > [class*='col-'] {
+    width: auto !important;
+    flex: auto;
+    padding-top: 0px;
+  }
+  .flex-row > [class*='col-'] img {}
+  .content__area {
+    position: relative;
+  }
+}
+@media (min-width: 768px) {
+  .content__area>.container .shape__1::before {
+    content: "";
+    height: 28px;
+    width: 224px;
+    background: transparent;
+    border: 3px solid #e08543;
+    position: absolute;
+    z-index: 9;
+    bottom: -14px;
+    left: -112px;
+    border-radius: 14.5px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    right: -112px;
+    left: initial;
+    top: 112px;
+  }
+
+  .content__area>.container .shape__1::after {
+    content: "";
+    height: 46px;
+    width: 46px;
+    position: absolute;
+    z-index: 0;
+    border-radius: 50%;
+    background: #3db7af;
+    right: 40px;
+    top: 40px;
+  }
+
+  .content__area>.container .shape__2::after{
+    content: "";
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    z-index: 0;
+    border-radius: 50%;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    background: linear-gradient(#3db7af 0% 4%, transparent 4% 8%, #3db7af 8% 12%, transparent 12% 16%, #3db7af 16% 20%, transparent 20% 24%, #3db7af 24% 28%, transparent 28% 32%, #3db7af 32% 36%, transparent 36% 40%, #3db7af 40% 44%, transparent 44% 48%, #3db7af 48% 52%, transparent 52% 56%, #3db7af 56% 60%, transparent 60% 64%, #3db7af 64% 68%, transparent 68% 72%, #3db7af 72% 76%, transparent 76% 80%, #3db7af 80% 84%, transparent 84% 88%, #3db7af 88% 92%, transparent 92% 96%, #3db7af 96% 100%);
+    left: 100px;
+    bottom: 0;
+  }
+}

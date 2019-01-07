@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>abilities</title>
+
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap-vue.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap-rtl.css">
+    <link rel="stylesheet" href="./assets/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="./assets/css/swiper.css">
+
+    <link rel="stylesheet" href="./assets/css/app.css">
+
+    <link rel="stylesheet" href="./assets/css/landing_page.css">
+  </head>
+  <body>
+    <div id="app" v-bind:class="{white_and_black_schema: inverseColorSchema}">
+
+      <template name="navbar__section">
+        <b-navbar id="navbar" toggleable type="light" variant="light" toggle-breakpoint="large" class="px-0 py-4" text="شريط التنقل" title="شريط التنقل">
+          <b-container class="px-0">
+            <b-row align-v="center" class="m-0">
+
+              <b-col cols="4"  md="2" offset-md="1" lg="1" offset-lg="2">
+                <div class="btn-group b-dropdown dropdown show">
+                  <button aria-haspopup="true" aria-expanded="true" type="button" class="btn btn-link" id="showMenuButton" v-on:click="showMenu=!showMenu" title="زر عرض القائمة" text="زر عرض القائمة">
+                    <i v-if="!showMenu" class="icon-nav-bars"></i>
+                    <i v-if="showMenu" class="icon-close"></i>
+                    <span class="sr-only">Menu</span>
+                  </button>
+                </div>
+              </b-col>
+
+              <b-col cols="4" md="6" lg="7" class="text-center">
+                <b-nav-brand><img src="./assets/img/abilities_logo.png" title="الشعار" text="الشعار"></b-nav-brand>
+              </b-col>
+
+            </b-row>
+          </b-container>
+        </b-navbar>
+        <b-container v-show="showMenu" fluid class="p-3 navbar__menu" title="قائمة التنقل" text="قائمة التنقل">
+          <b-container>
+            <b-row>
+              <b-col cols="12" md="10" offset-md="1" lg="8" offset-lg="2">
+                <div class="list-group">
+                  <a href="#" class="list-group-item list-group-item-action active">
+                    Cras justo odio
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action" title="قائمة التنقل الاول" text="قائمة التنقل الاول">Dapibus ac facilisis in</a>
+                  <a href="#" class="list-group-item list-group-item-action" title="قائمة التنقل الاول" text="قائمة التنقل الثاني">Morbi leo risus</a>
+                  <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+                  <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
+                </div>
+              </b-col>
+            </b-row>
+          </b-container>
+        </b-container>
+      </template>
+
+      <template name="main__swiper__section">
+        <b-container fluid class="p-0">
+          <b-row align-v="center" align-h="center">
+            <b-col cols="12">
+              <swiper :id="carousels.mainSwiper.id" :text="carousels.mainSwiper.title" :title="carousels.mainSwiper.title" :options="carousels.mainSwiper.swiperOption ? carousels.mainSwiper.swiperOption : swiperOption" class="swiper" :class="carousels.mainSwiper.specialClass" ref="mySwiper">
+                <!-- slides -->
+                <swiper-slide v-for="(slide, index) in carousels.mainSwiper.slides">
+                  <div :text="slide.img.text" :title="slide.img.text">
+                    <img slot="img" :src="slide.img.src" :alt="slide.img.alternative" :title="slide.img.title" />
+                    <p v-bind:class="{ 'swiper-slide-caption': slide.img }">{{slide.text}}</p>
+                  </div>
+                </swiper-slide>
+
+                <!-- Optional controls -->
+                <div v-if="swiperOption.pagination || (carousels.mainSwiper.swiperOption && carousels.mainSwiper.swiperOption.pagination)" class="swiper-pagination"  slot="pagination"></div>
+                <div v-if="swiperOption.navigation || (carousels.mainSwiper.swiperOption && carousels.mainSwiper.swiperOption.navigation)" class="swiper-button-prev" slot="button-prev"  title="الشريحة السابقة" text="الشريحة السابقة" ></div>
+                <div v-if="swiperOption.navigation || (carousels.mainSwiper.swiperOption && carousels.mainSwiper.swiperOption.navigation)" class="swiper-button-next" slot="button-next" text="الشريحة التالية" title="الشريحة التالية"></div>
+              </swiper>
+            </b-col>
+          </b-row>
+        </b-container>
+      </template>
+
+      <template name="nabdhah__section">
+        <b-container fluid class="nobdhah_section p-0">
+          <img src="./assets/img/landing_nobdhah_bg.png">
+          <b-container class="pt-5 px-0">
+            <b-row fluid>
+              <b-col cols="12" md="8" offset-md="2" lg="6" offset-lg="3">
+                <div class="content">
+                  <h1 class="display-4" title="نبذة ">نبذة </h1>
+                  <p>
+                    لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول استنكار  النشوة وتمجيد الألم نشأت بالفعل، وسأعرض لك التفاصيل لتكتشف حقيقة وأساس تلك السعادة البشرية، فلا أحد يرفض أو يكره أو يتجنب الشعور بالسعادة، ولكن بفضل هؤلاء الأشخاص الذين لا يدركون بأن السعادة لا بد أن نستشعرها بصورة أكثر عقلانية ومنطقية فيعرضهم هذا لمواجهة الظروف الأليمة، وأكرر بأنه لا يوجد من يرغب في الحب ونيل المنال ويتلذذ بالآلام، الألم هو الألم ولكن نتيجة لظروف ما قد تكمن السعاده فيما نتحمله من كد وأسي.
+                  </p>
+                </div>
+              </b-col>
+            </b-row>
+          </b-container>
+        </b-container>
+      </template>
+
+      <template name="join__the__group__section">
+        <b-container fluid class="join_group_section p-sm-5">
+          <b-container class="pt-5 px-0">
+            <b-row>
+              <b-col cols="12" md="8" offset-md="2">
+                <div class="content pt-5">
+                  <h1 class="display-4" title="انضم الى الحركة">انضم الى الحركة</h1>
+                  <p>
+                    لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول استنكار  النشوة وتمجيد الألم نشأت بالفعل، وسأعرض لك التفاصيل لتكتشف حقيقة وأساس تلك السعادة البشرية، فلا أحد يرفض أو يكره أو يتجنب الشعور بالسعادة، ولكن بفضل هؤلاء الأشخاص الذين لا يدركون بأن السعادة لا بد أن نستشعرها بصورة أكثر عقلانية ومنطقية فيعرضهم هذا لمواجهة الظروف الأليمة، وأكرر بأنه لا يوجد من يرغب في الحب ونيل المنال ويتلذذ بالآلام، الألم هو الألم ولكن نتيجة لظروف ما قد تكمن السعاده فيما نتحمله من كد وأسي.
+                  </p>
+                </div>
+              </b-col>
+            </b-row>
+            <b-row>
+              <!-- <b-col cols="12"><p class="bandages_separator"></p></b-col> -->
+              <b-col cols="12">
+                <ul class="share_links list-inline my-sm-5 my-xs-2 pb-3" title="Social Links">
+                  <li class="list-inline-item">
+                    <a href="#" title="Facebook Link">
+                      <span class="icon-facebook"></span>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" title="Twitter">
+                      <span class="icon-twitter"></span>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" title="Linkedin Link">
+                      <span class="icon-linkedin"></span>
+                    </a>
+                  </li>
+                </ul>
+              </b-col>
+            </b-row>
+          </b-container>
+        </b-container>
+      </template>
+
+      <template name="photo__gallery__section">
+        <b-container fluid class="photo_gallery_section p-sm-5">
+          <b-row>
+            <b-col cols="12"><p class="bandages_separator"></p></b-col>
+          </b-row>
+          <b-container class="pt-5 px-0">
+            <b-row>
+              <b-col cols="12" md="8" offset-md="2">
+                <h1 class="display-4" title="سفرائنا">سفرائنا</h1>
+              </b-col>
+            </b-row>
+            <b-row fluid>
+              <b-col cols="12">
+                <swiper :id="carousels.photoGallerySwiper.id" :title="carousels.photoGallerySwiper.title" :options="swiperOption" class="swiper" :class="carousels.photoGallerySwiper.specialClass" ref="mySwiper">
+                  <!-- slides -->
+                  <swiper-slide v-for="(slide, index) in carousels.photoGallerySwiper.slides" ref="showPhotoModal">
+                    <div v-on:click="showPhotoInModal(index)">
+                      <img v-if="slide.img" slot="img" :src="slide.img.src" :alt="slide.img.alternative" :title="slide.img.title"  />
+                      <p v-if="slide.text" v-bind:class="{ 'swiper-slide-caption': slide.img }" class="d-none">{{slide.text}}</p>
+                    </div>
+                  </swiper-slide>
+                  <!-- Optional controls -->
+                  <div v-if="swiperOption.pagination" class="swiper-pagination"  slot="pagination"></div>
+                  <div v-if="swiperOption.navigation" class="swiper-button-prev" slot="button-prev"></div>
+                  <div v-if="swiperOption.navigation" class="swiper-button-next" slot="button-next"></div>
+                </swiper>
+              </b-col>
+            </b-row>
+          </b-container>
+        </b-container>
+        <b-container v-if="photoInModalContent" class="photo__gallery__modal" >
+          <span v-on:click="hidePhotoInModal"></span>
+          <div class="modal__container" v-html="photoInModalContent.innerHTML"></div>
+        </b-container>
+      </template>
+
+      <template name="social__feeds__section">
+        <b-container fluid class="social_media_section p-sm-5">
+          <span class="circle_shape"></span>
+          <b-container class="pt-5 px-0 text-right">
+            <span class="circle_shape"></span>
+            <b-row>
+              <b-col cols="12" md="8" offset-md="2">
+                <h1 class="display-4 bandage_before" title="مواقع التواصل الاجتماعي">مواقع التواصل الاجتماعي</h1>
+              </b-col>
+            </b-row>
+
+            <b-row fluid>
+              <b-col cols="12">
+                <div id="social_feeds_block"></div>
+              </b-col>
+            </b-row>
+          </b-container>
+        </b-container>
+      </template>
+
+      <template id="contact__us__section">
+        <b-container fluid class="contact_us_section px-sm-0 py-5">
+          <b-container class="pt-5 px-0">
+            <b-row fluid>
+              <b-col cols="12" md="8" offset-md="2">
+                <h1 class="display-4 text-white" title="تواصل معنا">تواصل معنا</h1>
+              </b-col>
+            </b-row>
+            <b-row class="contact-us-component text-white">
+              <b-col cols="12 lead">
+                <p title="صندوق بريد">
+                  <span dir="ltr">168111</span>
+                </p>
+                <p title="الهاتف">
+                  <span dir="ltr">+971 55555555</span>
+                </p>
+                <p title="الفاكس">
+                  <span dir="ltr">+971 555555555</span>
+                </p>
+                <p class="pb-4">
+                  <img src="./assets/img/pada_logo.png" alt="PADA Logo" title="PADA Logo">
+                </p>
+                <p title="البريد الالكتروني">
+                  <span dir="ltr capitalize">
+                    <a href="www.pada.gov.kw" title="PADA Website">www.pada.gov.kw</a>
+                  </span>
+                </p>
+                <ul class="share_links list-inline my-4 " title="Social Links">
+                  <li class="list-inline-item">
+                    <a href="#" title="Facebook Link">
+                      <span class="icon-facebook"></span>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" title="Twitter">
+                      <span class="icon-twitter"></span>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" title="Linkedin Link">
+                      <span class="icon-linkedin"></span>
+                    </a>
+                  </li>
+                </ul>
+              </b-col>
+            </b-row>
+          </b-container>
+        </b-container>
+      </template>
+
+      <template name="footer__section">
+        <footer class="py-5">
+          Copyright © 2017 All rights reserved
+        </footer>
+      </template>
+
+      <template name="accessibilty__sticky__navbar">
+        <b-nav vertical class="accessibilty__sticky__navbar">
+          <b-nav-item v-on:click="inverseColorSchema=!inverseColorSchema">
+            <img src="./assets/img/screen_brightness.png" alt="" >
+          </b-nav-item>
+          <b-nav-item v-on:click="fontSize>=3?fontSize=fontSize:fontSize+=1;changeFontSize()">
+            <img src="./assets/img/font_increase.png" alt="">
+          </b-nav-item>
+          <b-nav-item v-on:click="fontSize<1?fontSize=fontSize:fontSize-=1;changeFontSize()">
+            <img src="./assets/img/font_decrease.png" alt="">
+          </b-nav-item>
+          <b-nav-item v-on:click="readContent">
+            <i class="icon-listen"></i>
+          </b-nav-item>
+        </b-nav>
+      </template>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+    <script src="./assets/js/vue.js"></script>
+    <script src="./assets/js/bootstrap-vue.js"></script>
+    <script src="./assets/js/swiper.js"></script>
+    <script src="./assets/js/vue-awesome-swiper.js"></script>
+
+    <script src="./assets/js/codebird.js"></script>
+    <script src="./assets/js/doT.min.js"></script>
+    <script src="./assets/js/moment.min.js"></script>
+    <script src="./assets/js/jquery.socialfeed.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+  </body>
+</html>

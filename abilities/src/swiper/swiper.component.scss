@@ -1,0 +1,164 @@
+@import "../assets/scss/variables.scss";
+@import "../assets/scss/mixins.scss";
+.swiper {
+
+  &#joinGroupSwiper {
+    &:before {
+      @media (min-width: 768px) {
+        @include bandage(74px, 20px, $ORANGE, $ORANGE, 0, -45deg);
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        left: initial;
+        right: -74px;
+      }
+    }
+  }
+
+  @media (min-width: 576px) {
+    margin: 0 20px;
+  }
+  @media (min-width: 768px) {
+    margin: 0 40px;
+  }
+  @media (min-width: 992px) {
+    margin: 0 60px;
+  }
+  @media (min-width: 1200px) {
+    margin: 0 100px;
+  }
+
+  position: initial;
+  &-slide {
+    text-align: center;
+    padding: 0 20px;
+    img {
+      max-width: 100%;
+    }
+    &-caption {
+      font-size: 24px;
+      margin-top: 8px;
+      color: $BLUE;
+    }
+  }
+  &-button-prev, &-button-next {
+    background-image: none !important;
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 32px;
+    height: auto;
+  }
+  &-button-next {
+    text-align: left;
+    left: 10px;
+    &:after {
+      content: "\e624";
+    }
+  }
+  &-button-prev {
+    text-align: right;
+    right: 10px;
+    &:after {
+      content: "\e625";
+    }
+  }
+
+  &#photoGallerySwiper {
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50px;
+      bottom: 50px;
+      left: -10000px;
+      right: -10000px;
+      background: $GREY;
+    }
+    &:after {
+      @media (min-width: 576px) {
+        @include circleGradient(150px, 150px, $TURQUOISE, transparent, -45deg);
+        left: -40px;
+        bottom: -60px;
+      }
+      @media (min-width: 768px) {
+        @include circleGradient(200px, 200px, $TURQUOISE, transparent, -45deg);
+        left: -40px;
+        bottom: -60px;
+      }
+      z-index: 0 !important;
+      right: initial;
+    }
+    .swiper-wrapper {
+      @media (min-width: 768px) {
+        padding-top: 25px;
+        padding-bottom: 25px;
+      }
+    }
+    .swiper-slide {
+      padding: 0 1px;
+      @media (min-width: 768px) {
+        &:nth-child(odd) {
+          margin-top: -25px !important;
+        }
+
+        &:nth-child(even) {
+          margin-bottom: -25px !important;
+        }
+      }
+    }
+    .swiper-button-prev, .swiper-button-next {
+      color: $WHITE !important;
+    }
+  }
+
+  &#mainSwiper{
+    &:after {
+      @include bandage(224px, 28px, $TURQUOISE, $TURQUOISE, 0, -45deg)
+    }
+    &:before {
+      @include bandage(74px, 20px, $ORANGE, $ORANGE, 0, -45deg)
+      bottom: -16px;
+      left: 11px;
+    }
+    .swiper-button {
+      &-prev, &-next {
+        width: auto;
+        color: $WHITE;
+      }
+    }
+    .swiper-pagination {
+      position: relative;
+      margin: 30px 0;
+      top: auto;
+      bottom: auto;
+      left: auto;
+      right: auto;
+      width: auto;
+      padding: 0;
+      span {
+        background: $WHITE;
+        width: 12px;
+        height: 12px;
+        margin: 0 6px;
+        border-radius: $BORDER_RADIUS_CIRCLE;
+      }
+    }
+    .swiper-wrapper {
+      .swiper-slide {
+        img {
+          max-width: 100%;
+          width: 640px;
+        }
+      }
+    }
+  }
+}

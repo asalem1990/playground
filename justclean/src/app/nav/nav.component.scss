@@ -1,0 +1,75 @@
+@import "../../vars.scss";
+.navbar-default {
+	background: $primary_white_color;
+
+	.navbar-brand {
+		padding: 0 60px 0 0;
+		margin: 0;
+		height: 76px;
+		line-height: 76px;
+		img {
+			display: inline-block;
+	    height: 36px;
+		}
+	}
+
+	.navbar-nav {
+		font-size: 18px;
+    font-weight: 300;
+		li {
+			height: 76px;
+			line-height: 76px;
+			display: flex;
+			align-items: center;
+			a:not(.btn) {
+				line-height: 36px;
+				height: 36px;
+				padding-top: 0;
+		    padding-bottom: 0;
+				color: darken($primary_grey_color, 40%);
+			}
+
+			&.active {
+				a:not(.btn) {
+					background: none;
+					color: $primary_red_color;
+				}
+			}
+
+			.btn {
+				padding-top: 0;
+				padding-bottom:0;
+				line-height: 36px;
+				height: 36px;
+			}
+
+			&.seperator {
+				&:after {
+					content: '';
+					border-left: 1px solid darken($primary_grey_color, 20%);
+					display: inline-block;
+					width: 1px;
+					height: 28px;
+					margin: 0 10px;
+				}
+			}
+		}
+
+		[href='/cart'] {
+			img {
+				height: 18px;
+				vertical-align: text-bottom;
+				margin-right: 4px;
+			}
+		}
+
+		&.pull-right {
+			text-transform: uppercase;
+			font-size: 12px;
+			.btn, a {
+				font-size: inherit;
+		    min-width: 76px;
+			}
+		}
+	}
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>abilities</title>
+
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap-vue.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap-rtl.css">
+    <link rel="stylesheet" href="./assets/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="./assets/css/app.css">
+
+    <link rel="stylesheet" href="./assets/css/gallery_page.css">
+  </head>
+  <body>
+    <div id="app">
+
+      <template name="details__page__navbar__section">
+        <b-navbar id="navbar" toggleable type="light" variant="light" toggle-breakpoint="large" class="px-0 py-4">
+          <b-container class="px-0 text-right">
+            <b-row align-v="center" class="m-0">
+
+              <b-col cols="4" md="2" offset-md="1" lg="1" offset-lg="2">
+                <div class="btn-group b-dropdown dropdown show">
+                  <button aria-haspopup="true" aria-expanded="true" type="button" class="btn btn-link" id="showMenuButton" v-on:click="showMenu=!showMenu;showSearchBar=false">
+                    <i v-if="!showMenu" class="icon-nav-bars"></i>
+                    <i v-if="showMenu" class="icon-close"></i>
+                    <span class="sr-only">Menu</span>
+                  </button>
+
+                  <button aria-haspopup="true" aria-expanded="true" type="button" class="btn btn-link" id="showSearchBarButton" v-on:click="showSearchBar=!showSearchBar;showMenu=false">
+                    <i class="icon-search"></i>
+                    <span class="sr-only">Search</span>
+                  </button>
+                </div>
+              </b-col>
+
+              <b-col cols="4" offset="4" sm="8" offset-sm="0" md="8" lg="7" class="text-left">
+                <b-nav-brand><img src="./assets/img/abilities_logo.png"></b-nav-brand>
+              </b-col>
+
+            </b-row>
+          </b-container>
+        </b-navbar>
+        <b-container v-show="showMenu" fluid class="p-3 navbar__menu">
+          <b-container>
+            <b-row>
+              <b-col cols="12" md="10" offset-md="1" lg="8" offset-lg="2">
+                <div class="list-group">
+                  <a href="#" class="list-group-item list-group-item-action active">
+                    Cras justo odio
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                  <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+                  <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+                  <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
+                </div>
+              </b-col>
+            </b-row>
+          </b-container>
+        </b-container>
+
+        <b-container v-show="showSearchBar" fluid class="p-3 navbar__menu">
+          <b-container>
+            <b-row>
+              <b-col cols="12" md="10" offset-md="1" lg="8" offset-lg="2">
+                <div class="list-group">
+                  <b-input-group>
+                    <b-form-input name="search" placeholder="Searcg"></b-form-input>
+                    <b-input-group-prepend>
+                      <b-btn><i class="icon-search"></i></b-btn>
+                    </b-input-group-prepend>
+                  </b-input-group>
+                </div>
+              </b-col>
+            </b-row>
+          </b-container>
+        </b-container>
+      </template>
+
+      <template name="content__section">
+        <b-container fluid class="mb-5 pb-5 content__area">
+          <b-container class="mb-5 ">
+            <span class="shape__1"></span>
+            <span class="shape__2"></span>
+            <b-row fluid>
+              <b-col cols="12" md="10" offset-md="1" lg="8" offset-lg="2">
+                <template>
+                  <b-breadcrumb :items="items"/>
+                </template>
+              </b-col>
+            </b-row>
+
+            <b-row fluid class="flex-row">
+              <b-col cols="12">
+                <img src="./assets/img/gallery_page_1.jpg" alt="">
+              </b-col>
+            </b-row>
+            <b-row fluid class="flex-row">
+              <b-col cols="12">
+                <img cols="12" src="./assets/img/gallery_page_2.jpg" alt="">
+              </b-col>
+              <b-col cols="12">
+                <img cols="12" src="./assets/img/gallery_page_3.jpg" alt="">
+              </b-col>
+            </b-row>
+            <b-row fluid class="flex-row">
+              <b-col cols="12">
+                <img src="./assets/img/gallery_page_4.jpg" alt="">
+              </b-col>
+            </b-row>
+          </b-container>
+        </b-container>
+      </template>
+
+      <template name="footer__section">
+        <footer class="py-5">
+          Copyright © 2017 All rights reserved
+        </footer>
+      </template>
+
+    </div>
+
+    <script src="./assets/js/vue.js"></script>
+    <script src="./assets/js/bootstrap-vue.js"></script>
+
+    <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        showMenu: false,
+        showSearchBar: false,
+        items: [{
+          text: 'Admin',
+          href: '#'
+        }, {
+          text: 'Manage',
+          href: '#'
+        }, {
+          text: 'Library',
+          active: true
+        }]
+      },
+      methods: {},
+      computed: {},
+      mounted() {}
+    });
+
+    </script>
+  </body>
+</html>

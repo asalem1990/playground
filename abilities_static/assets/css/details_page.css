@@ -1,0 +1,111 @@
+.content__area {
+  position: relative;
+}
+@media (min-width: 768px) {
+  .hero__banner__image .bandage_shape::after {
+    content: "";
+    height: 46px;
+    width: 244px;
+    background: #FFFFFF;
+    position: absolute;
+    z-index: 9;
+    border-radius: 23px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    right: -100px;
+    left: initial;
+    top: 80px;
+    bottom: -14px;
+  }
+  .hero__banner__image .circle_shape::before {
+    content: "";
+    height: 58px;
+    width: 58px;
+    position: absolute;
+    z-index: 9;
+    border-radius: 50%;
+    background: #065d9d;
+    right: 118px;
+    left: initial;
+    top: 184px;
+  }
+
+  .hero__banner__image .bandage_shape.bottom_right::after {
+    top: initial;
+    right: initial;
+    left: 304px;
+    bottom: 110px;
+    height: 28px;
+    width: 160px;
+    border-radius: 14px;
+  }
+
+  .hero__banner__image .circle_shape.bottom_right::before {
+    top: initial;
+    right: initial;
+    left: 294px;
+    bottom: 36px;
+    height: 28px;
+    width: 28px;
+    background-color: #e08543;
+  }
+
+  .hero__banner__image .bandage_shape.small_size_shape.bottom_right::after {
+    content: "";
+    height: 28px;
+    width: 240px;
+    background: #065d9d;
+    position: absolute;
+    z-index: 9;
+    border-radius: 14px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: initial;
+    right: initial;
+    left: 72px;
+    bottom: -24px;
+  }
+
+  .hero__banner__image .bandage_shape.small_size_shape.bottom_right::before {
+    content: none;
+  }
+
+  .content__area::after {
+    content: "";
+    height: 46px;
+    width: 244px;
+    background: #065d9d;
+    position: absolute;
+    z-index: 9;
+    border-radius: 23px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    right: -158px;
+    left: initial;
+    top: initial;
+    bottom: 30px;
+  }
+
+  .content__area::before {
+    content: "";
+    height: 58px;
+    width: 58px;
+    position: absolute;
+    z-index: 9;
+    border-radius: 50%;
+    background: #3db7af;
+    right: -4px;
+    left: initial;
+    top: initial;
+    bottom: 64px;
+  }
+}

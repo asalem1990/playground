@@ -1,0 +1,12 @@
+<div class="container" *ngIf="items">
+  <div class="row">
+    <div class="col-sm-6 col-md-4" *ngFor="let item of items">
+      <div class="thumbnail" (click)="this.goToProductDetails(item.id)">
+        <img src="{{item.imageUrl}}" alt="...">
+        <div class="caption">
+          <h3>{{item.name}}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
